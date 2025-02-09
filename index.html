@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charts Showcase</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #444;
+        }
+
+        /* 页头样式 */
+        header {
+            background-color: #333;  /* 调整为深灰色 */
+            color: white;
+            text-align: center;
+            padding: 25px 0;
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+
+        /* 内容部分 */
+        .container {
+            display: flex;
+            flex-direction: column; /* 纵向排列 */
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        /* 单个图表的外框 */
+        .chart-container {
+            width: 80%;
+            margin: 20px 0; /* 纵向排列时，上下都有间隔 */
+            background-color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 1000px;  /* 调整高度适应纵向排布 */
+            overflow: hidden;
+        }
+
+        /* 文字说明 */
+        .chart-description {
+            width: 80%;
+            font-size: 1rem;
+            color: #666; /* 调整副标题和描述颜色 */
+            padding: 15px;
+            font-weight: 500;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* 页脚样式 */
+        footer {
+            background-color: #222; /* 深灰色 */
+            color: white;
+            text-align: center;
+            padding: 12px 0;
+            font-size: 0.9rem;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            overflow: hidden;  /* 禁用滚动条 */
+        }
+
+        /* 适配小屏幕 */
+        @media (max-width: 900px) {
+            .chart-container, .chart-description {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 页头 -->
+    <header>
+        Charts Showcase
+    </header>
+
+    <!-- 内容部分 -->
+    <div class="container">
+        <!-- 第一个图表 -->
+        <div class="chart-container">
+            <h3>openGauss 资源池化组总体DI分布概览</h3>
+            <iframe src="资源池化待解决.html" scrolling="no"></iframe>
+        </div>
+        <div class="chart-description">
+            <p>截至目前资源池化组DI总体分布，仅统计7.0.0 RC-1 项目下问题。</p>
+        </div>
+
+        <!-- 第二个图表 -->
+        <div class="chart-container">
+            <h3>openGauss 资源池化组组内阅读解决问题统计</h3>
+            <iframe src="资源池化月度完成.html" scrolling="no"></iframe>
+        </div>
+        <div class="chart-description">
+            <p>本月资源池化各成员总体DI解决分布概况，统计区间为上月15日到本月15日。</p>
+        </div>
+    </div>
+</body>
+</html>
